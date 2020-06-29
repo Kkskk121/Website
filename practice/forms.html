@@ -1,3 +1,5 @@
+<!--Katie Kim 6/26/2020-->
+
 <!DOCTYPE html>
 
 <!--Learned: Forms, login, label, and inputs! Basic verification (required)-->
@@ -8,21 +10,82 @@
     <title>Form Demo</title>
 </head>
 <body>
-    <h1> Login</h1>
+    <h1>Register</h1>
 <!--action - where the form sends data to-->
 <!--method - what HTTP method (get/post)-->
 
     <form action = "http://wikipedia.com", method = 'GET'>
+        <div>
+        <label>
+            First Name:
+            <input required name = "firstName" type = "text" placeholder = "John">
+        </label>
+        <label>
+            Last Name:
+            <input required name = "lastName" type = "text" placeholder = "Smith">
+        </label>
+        </div>
+        
+        <div>
+        <label for = "male">Male </label>
+        <input id = "male" name = "gender" type = "radio"> 
+
+        <label for = "female">Female </label>
+        <input id = "female" name = "gender" type = "radio"> 
+
+        <label for = "other">Other </label>
+        <input id = "other" name = "gender" type = "radio"> 
+
+        </div>
+
+        <div>
         <label>
             Email:
-            <input required name = "Email" type = "email" placeholder = "Email">
+            <input required name = "Email" type ="email" placeholder = "your email">
         </label>
+        
         <label>
             Password:
-            <input required name = "password " type ="password" placeholder = "password">
+            <input required name = "password " minlength="5" maxlength= "10" type ="password" placeholder = "password">
         </label>
+        </div>
+        
+
+        <div>
+        <label>Birthday: </label>
+
+
+        <select name = "Month">
+            <option selected hidden>Month</option>
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>March</option>
+            <option>April</option>
+        </select>
+
+        <select name = "Day">
+            <option selected hidden>Day</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <select name = "Year">
+            <option selected hidden>Year</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+        </select>
+
+        </div>
+        I agree to the terms and conditions <input name = "gender" type = "checkbox">
+         
     
-        <button>Login</button>
+        <div>
+        <button>Submit</button>
+        </div>
     </form>
     
 </body>
